@@ -77,19 +77,19 @@ let filterBtnEl = document.getElementById("filterBtn");
 // 1 ko ieskosiu, veliau pakeisiu
 let wordISearch = "CSS";
 
-// 3 isiterpia nes reikia pries funkcija aprasyt ieskomos reiksmes is inputo
-
 // idet i event listeneri
 
 // EVENT LISTENER PRADZIA
-
-// 2 sukuriu tuscia array kuris bus perrasomas ir pagal kuri atnaujinsiu html
-let searchedArray = postsData.filter((arrayElementIthink) =>
-  arrayElementIthink.title.includes(wordISearch)
-);
-
-// X perleidziu render funkcija su jau esamais filtrais ir array
-render(searchedArray);
+filterBtnEl.addEventListener("click", () => {
+  // 2 sukuriu tuscia array kuris bus perrasomas ir pagal kuri atnaujinsiu html
+  let searchedArray = postsData.filter((arrayElementIthink) =>
+    arrayElementIthink.title
+      .toLowerCase()
+      .includes(FilterEl.value.toLowerCase())
+  );
+  // X perleidziu render funkcija su jau esamais filtrais ir array
+  render(searchedArray);
+});
 
 // EVENT LISTENER PABAIGA
 
