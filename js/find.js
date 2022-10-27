@@ -39,7 +39,7 @@ const arrayOfObjects = [
 ];
 
 // surasti obj kurio title === CSS
-let foundPost = null;
+// let foundPost = null;
 // for (let post of arrayOfObjects) {
 //   // console.log('post ===', post);
 //   // console.log('post.title ===', post.title);
@@ -51,7 +51,7 @@ let foundPost = null;
 // }
 // find versija
 // foundPost = arrayOfObjects.find((postObj) => postObj.title === 'CSS');
-foundPost = arrayOfObjects.find((postObj) => {
+let foundPost = arrayOfObjects.find((postObj) => {
   if (postObj.title === 'CSS') {
     return true;
   }
